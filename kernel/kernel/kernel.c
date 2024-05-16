@@ -9,6 +9,6 @@ void kernel_main(void) {
         if (i%2==0)
 	        printf("Hello, kernel World!\n");
         else
-            printf("HELLO AGAIN!\n");
+            printf("HELLO AGAIN! %d\n", i);
     }
 }

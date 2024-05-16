@@ -146,7 +146,7 @@ double pow10(int n) {
 }
 
 double log10(double x) {
-    double lower = 0, upper = x, mid;
+    double lower = 0, upper = x, mid = 0;
     while (upper - lower > 1e-6) { // Continue until the desired precision is reached
         mid = (lower + upper) / 2;
         if (pow10(mid) > x) {
