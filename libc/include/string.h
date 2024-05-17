@@ -12,7 +12,11 @@ extern "C" {
 int memcmp(const void*, const void*, size_t);
 void* memcpy(void* __restrict, const void* __restrict, size_t);
 void* memmove(void*, const void*, size_t);
+void *mempcpy(void *, const void *, size_t);
 void* memset(void*, int, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *strcat(char *restrict, const char *restrict);
+char *strcpy(char *restrict, const char *restrict);
 size_t strlen(const char*);
 
 #ifdef __cplusplus
