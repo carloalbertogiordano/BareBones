@@ -2,7 +2,7 @@ DEFAULT_HOST!=../default-host.sh
 HOST?=DEFAULT_HOST
 HOSTARCH!=../target-triplet-to-arch.sh $(HOST)
 
-CFLAGS?=-O2 -g
+CFLAGS?=-O2 -g -fstack-protector
 CPPFLAGS?=
 LDFLAGS?=
 LIBS?=
@@ -35,11 +35,15 @@ stdio/puts.o \
 stdlib/abort.o \
 stdlib/math.o \
 stdlib/itoa.o \
+string/mempcpy.o \
 string/memcmp.o \
 string/memcpy.o \
 string/memmove.o \
 string/memset.o \
 string/strlen.o \
+string/stpcpy.o \
+string/strcpy.o \
+string/strcat.o \
 
 HOSTEDOBJS=\
 $(ARCH_HOSTEDOBJS) \
